@@ -1,14 +1,36 @@
+@use 'variables';
+
 // Flexbox mixins
 @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin flex-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+// Button mixin
+@mixin button-style($bg-color, $text-color, $hover-bg) {
+  background: $bg-color;
+  color: $text-color;
+  border: 2px solid $bg-color;
+  padding: 12px 30px;
+  font-family: variables.$font-secondary;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    background: $hover-bg;
+    border-color: $hover-bg;
+    transform: translateY(-2px);
+  }
 }
 
 // Animation keyframes

@@ -1,11 +1,18 @@
 // Cores
 $primary-color: #f0b90b;
+$secondary-color: #1a1a1a;
 $text-color: #ffffff;
 $bg-dark: #0a0a0a;
 
 // Tipografia
+$font-primary: 'Bebas Neue', cursive;
 $font-secondary: 'Oswald', sans-serif;
 $font-body: 'Roboto', sans-serif;
 
 // Espaçamento
 $container-max-width: 1200px;
+$section-padding: 80px 0;
+
+// Sombras
+$shadow-dark: 0 5px 20px rgba(0, 0, 0, 0.3);
+$shadow-heavy: 0 10px 40px rgba(0, 0, 0, 0.5);
