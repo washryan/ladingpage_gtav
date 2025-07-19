@@ -255,7 +255,7 @@
     }
     
     h3 {
-      color: $primary-color;
+      color: variables.$primary-color;
       margin-bottom: 1rem;
     }
   }
@@ -263,12 +263,65 @@
   .cross-platform {
     text-align: center;
     padding: 2rem;
-    background: rgba($primary-color, 0.1);
+    background: rgba(variables.$primary-color, 0.1);
     border-radius: 10px;
     
     h4 {
-      color: $primary-color;
+      color: variables.$primary-color;
       margin-bottom: 1rem;
+    }
+  }
+}
+
+// FAQ Section
+.faq {
+  background: variables.$secondary-color;
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(variables.$text-color, 0.1);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      @include mixins.flex-between;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      transition: variables.$transition-fast;
+
+      &:hover {
+        color: variables.$primary-color;
+      }
+
+      h4 {
+        margin: 0;
+        font-family: variables.$font-secondary;
+        font-weight: 500;
+      }
+
+      .faq-toggle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        transition: variables.$transition-fast;
+      }
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height variables.$transition-slow;
+
+      p {
+        padding-bottom: 1.5rem;
+        color: rgba(variables.$text-color, 0.8);
+        line-height: 1.6;
+      }
     }
   }
 }
