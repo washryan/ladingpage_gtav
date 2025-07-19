@@ -227,3 +227,48 @@
     }
   }
 }
+
+// Devices Section
+.devices {
+  background: linear-gradient(
+    135deg,
+    variables.$bg-dark 0%,
+    color.adjust(variables.$bg-dark, $lightness: -5%) 100%
+  );
+
+  .devices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .device-card {
+    @extend .card;
+    text-align: center;
+    
+    .device-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+      filter: brightness(0) invert(1);
+    }
+    
+    h3 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .cross-platform {
+    text-align: center;
+    padding: 2rem;
+    background: rgba($primary-color, 0.1);
+    border-radius: 10px;
+    
+    h4 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+  }
+}
