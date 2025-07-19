@@ -1,0 +1,45 @@
+@use 'variables';
+@use "sass:color";
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: variables.$font-body;
+    line-height: 1.6;
+    color: variables.$text-color;
+    background: variables.$bg-dark;
+    overflow-x: hidden;
+}
+
+// Container
+.container {
+    max-width: variables.$container-max-width;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// Links
+a {
+    color: variables.$primary-color;
+    text-decoration: none;
+
+    &:hover {
+        color: color.adjust(variables.$primary-color, $lightness: 10%);
+    }
+
+}
+
+// Images
+img {
+    max-width: 100%;
+    height: auto;
+}
