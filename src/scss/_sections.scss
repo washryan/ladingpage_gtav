@@ -114,6 +114,116 @@
         font-family: variables.$font-secondary;
         margin-bottom: 1rem;
       }
+
+      p {
+        color: rgba(variables.$text-color, 0.8);
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.plans {
+  background: variables.$secondary-color;
+  position: relative;
+
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .plan-card {
+    @extend .card;
+    text-align: center;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all variables.$transition-fast;
+
+      &:hover {
+        transform: translateY(-8px);
+        border-color: rgba(variables.$primary-color, 0.3);
+    }
+
+    &.featured {
+      transform: scale(1.05);
+      border: 2px solid variables.$primary-color;
+      background: linear-gradient(135deg, rgba(variables.$primary-color, 0.1), rgba(variables.$secondary-color, 0.9));
+    
+      &:hover {
+        transform: scale(1.05) (translateY(-8px));
+      }
+
+      .plan-badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(
+          45deg,
+          variables.$primary-color,
+          color.adjust(variables.$primary-color, $lightness: 10%)
+        );
+        color: variables.$bg-dark;
+        padding: 8px 25px;
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: variables.$shadow-dark;
+      }
+    }
+
+    .plan-header {
+      margin-bottom: 2.5rem;
+
+      h3 {
+        color: variables.$primary-color;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+      }
+
+      .plan-price {
+        font-family: variables.$font-primary;
+        font-size: 3.5rem;
+        color: variables.$text-color;
+        font-weight: 400;
+
+        .currency {
+          font-size: 1.8rem;
+          vertical-align: top;
+          color: rgba(variables.$text-color, 0.7);
+        }
+
+        .period {
+          font-size: 1.8rem;
+          vertical-align: top;
+          color: rgba(variables.$text-color, 0.7);
+        }
+      }
+    }
+
+    .plan-features {
+      list-style: none;
+      margin-bottom: 2.5rem;
+
+      li {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(variables.$text-color, 0.1);
+        color: rgba(variables.$text-color, 0.9);
+        font-size: 1rem;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          color: variables.$primary-color;
+        }
+      }
     }
   }
 }
