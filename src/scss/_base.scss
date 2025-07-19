@@ -1,6 +1,7 @@
 @use 'variables';
 @use "sass:color";
 
+
 // Reset
 * {
   margin: 0;
@@ -56,11 +57,11 @@ p {
 a {
   color: variables.$primary-color;
   text-decoration: none;
-  transition: variables.$transition-fast;;
+  transition: variables.$transition-fast;
   
   &:hover {
     color: color.adjust(variables.$primary-color, $lightness: 10%);
-    }
+  }
 }
 
 // Images

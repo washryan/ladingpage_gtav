@@ -1,16 +1,16 @@
 @use 'variables';
-@use "sass:color";
 @use 'mixins';
 @use 'components';
+@use 'sass:color';
 
-// Hero Section
+// Hero Section - Seção Principal
 .hero {
   height: 100vh;
   position: relative;
   @include mixins.flex-center;
   text-align: center;
   overflow: hidden;
-  
+
   .hero-background {
     position: absolute;
     top: 0;
@@ -18,14 +18,14 @@
     width: 100%;
     height: 100%;
     z-index: -2;
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-  
-  .hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+
   .hero-overlay {
     position: absolute;
     top: 0;
@@ -35,10 +35,10 @@
     background: rgba(variables.$bg-dark, 0.6);
     z-index: -1;
   }
-  
+
   .hero-content {
     @include mixins.fadeInUp;
-    
+
     .hero-title {
       font-size: clamp(4rem, 10vw, 8rem);
       font-weight: 400;
@@ -46,13 +46,13 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
       letter-spacing: 3px;
     }
-    
+
     .hero-subtitle {
       font-size: clamp(1.2rem, 3vw, 1.8rem);
       margin-bottom: 2rem;
       color: rgba(variables.$text-color, 0.9);
     }
-    
+
     .hero-buttons {
       display: flex;
       gap: 1rem;
@@ -62,13 +62,14 @@
   }
 }
 
-// About Section
+// About Section - Sobre
 .about {
-    background: linear-gradient(
-    135deg,
-    variables.$bg-dark 0%,
+  background: linear-gradient(
+    135deg, 
+    variables.$bg-dark 0%, 
     color.adjust(variables.$bg-dark, $lightness: -5%) 100%
-    );
+  );
+
 
   .about-grid {
     display: grid;
@@ -76,11 +77,11 @@
     gap: 2rem;
     margin-bottom: 4rem;
   }
-  
+
   .about-card {
     @extend .card;
     text-align: center;
-    
+
     .about-image {
       width: 150px;
       height: 150px;
@@ -89,49 +90,44 @@
       margin-bottom: 1rem;
       border: 3px solid variables.$primary-color;
     }
-    
+
     h3 {
       color: variables.$primary-color;
       margin-bottom: 1rem;
     }
   }
-  
+
   .about-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    
+
     .feature {
       text-align: center;
-      
+
       .feature-icon {
         font-size: 3rem;
         margin-bottom: 1rem;
       }
-      
+
       h4 {
         color: variables.$primary-color;
         font-family: variables.$font-secondary;
         margin-bottom: 1rem;
       }
-
-      p {
-        color: rgba(variables.$text-color, 0.8);
-        line-height: 1.6;
-      }
     }
   }
 }
 
+// Plans Section - Planos
 .plans {
   background: variables.$secondary-color;
-  position: relative;
 
   .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    max-width: 1100px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -139,102 +135,65 @@
     @extend .card;
     text-align: center;
     position: relative;
-    border: 2px solid transparent;
-    transition: all variables.$transition-fast;
-
-      &:hover {
-        transform: translateY(-8px);
-        border-color: rgba(variables.$primary-color, 0.3);
-    }
 
     &.featured {
       transform: scale(1.05);
       border: 2px solid variables.$primary-color;
-      background: linear-gradient(135deg, rgba(variables.$primary-color, 0.1), rgba(variables.$secondary-color, 0.9));
-    
-      &:hover {
-        transform: scale(1.05) (translateY(-8px));
-      }
 
       .plan-badge {
         position: absolute;
         top: -15px;
         left: 50%;
         transform: translateX(-50%);
-        background: linear-gradient(
-          45deg,
-          variables.$primary-color,
-          color.adjust(variables.$primary-color, $lightness: 10%)
-        );
+        background: variables.$primary-color;
         color: variables.$bg-dark;
-        padding: 8px 25px;
-        border-radius: 25px;
-        font-weight: 700;
+        padding: 5px 20px;
+        border-radius: 20px;
+        font-weight: 600;
         font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        box-shadow: variables.$shadow-dark;
       }
     }
 
     .plan-header {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
 
       h3 {
         color: variables.$primary-color;
-        margin-bottom: 1.5rem;
-        font-size: 1.8rem;
+        margin-bottom: 1rem;
       }
 
       .plan-price {
         font-family: variables.$font-primary;
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: variables.$text-color;
-        font-weight: 400;
 
-        .currency {
-          font-size: 1.8rem;
-          vertical-align: top;
-          color: rgba(variables.$text-color, 0.7);
-        }
-
+        .currency,
         .period {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           vertical-align: top;
-          color: rgba(variables.$text-color, 0.7);
         }
       }
     }
 
     .plan-features {
       list-style: none;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
 
       li {
-        padding: 0.8rem 0;
+        padding: 0.5rem 0;
         border-bottom: 1px solid rgba(variables.$text-color, 0.1);
-        color: rgba(variables.$text-color, 0.9);
-        font-size: 1rem;
-        
+
         &:last-child {
           border-bottom: none;
-        }
-
-        &:hover {
-          color: variables.$primary-color;
         }
       }
     }
   }
 }
 
-// Devices Section
+// Devices Section - Dispositivos
 .devices {
-  background: linear-gradient(
-    135deg,
-    variables.$bg-dark 0%,
-    color.adjust(variables.$bg-dark, $lightness: -5%) 100%
-  );
+  background: linear-gradient(135deg, variables.$bg-dark 0%, color.adjust(variables.$bg-dark, $lightness: -5%) 100%);
 
   .devices-grid {
     display: grid;
@@ -242,30 +201,30 @@
     gap: 2rem;
     margin-bottom: 3rem;
   }
-  
+
   .device-card {
     @extend .card;
     text-align: center;
-    
+
     .device-icon {
       width: 80px;
       height: 80px;
       margin-bottom: 1rem;
       filter: brightness(0) invert(1);
     }
-    
+
     h3 {
       color: variables.$primary-color;
       margin-bottom: 1rem;
     }
   }
-  
+
   .cross-platform {
     text-align: center;
     padding: 2rem;
     background: rgba(variables.$primary-color, 0.1);
     border-radius: 10px;
-    
+
     h4 {
       color: variables.$primary-color;
       margin-bottom: 1rem;
@@ -273,7 +232,7 @@
   }
 }
 
-// FAQ Section
+// FAQ Section - Perguntas Frequentes
 .faq {
   background: variables.$secondary-color;
 
@@ -323,10 +282,21 @@
         line-height: 1.6;
       }
     }
+
+    &.active {
+      .faq-question .faq-toggle {
+        transform: rotate(45deg);
+        color: variables.$primary-color;
+      }
+
+      .faq-answer {
+        max-height: 200px;
+      }
+    }
   }
 }
 
-// Footer
+// Footer - Rodapé
 .footer {
   background: variables.$bg-dark;
   padding: 3rem 0 1rem;

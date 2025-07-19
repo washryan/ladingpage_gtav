@@ -1,0 +1,81 @@
+@use 'mixins';
+
+// Celular estilização
+@include mixins.mobile {
+  .hero {
+    .hero-content {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  
+  .about-grid,
+  .plans-grid,
+  .devices-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .plans .plan-card.featured {
+    transform: none;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 3rem;
+  }
+}
+
+// Tablet estilização
+@include mixins.tablet {
+  .navbar .navbar-nav {
+    gap: 1rem;
+  }
+  
+  .hero .hero-content .hero-buttons {
+    gap: 0.5rem;
+  }
+  
+  .about-features {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+// PC estilização
+@include mixins.desktop {
+  .container {
+    padding: 0 40px;
+  }
+  
+  .hero .hero-content {
+    .hero-title {
+      font-size: 8rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Atrasos na animação para efeitos em cascata
+.about-card:nth-child(1) { animation-delay: 0.1s; }
+.about-card:nth-child(2) { animation-delay: 0.2s; }
+.about-card:nth-child(3) { animation-delay: 0.3s; }
+
+.plan-card:nth-child(1) { animation-delay: 0.1s; }
+.plan-card:nth-child(2) { animation-delay: 0.2s; }
+.plan-card:nth-child(3) { animation-delay: 0.3s; }
+
+.device-card:nth-child(1) { animation-delay: 0.1s; }
+.device-card:nth-child(2) { animation-delay: 0.2s; }
+.device-card:nth-child(3) { animation-delay: 0.3s; }

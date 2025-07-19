@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTA V - Grand Theft Auto V | Rockstar Games</title>
     <meta name="description" content="Experimente o mundo aberto mais ambicioso já criado. GTA V disponível para PC, PlayStation e Xbox.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
     <!-- Header -->
-     <header class="header">
+    <header class="header">
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
@@ -27,13 +32,20 @@
                     <li><a href="#devices" class="nav-link">Dispositivos</a></li>
                     <li><a href="#faq" class="nav-link">FAQ</a></li>
                 </ul>
+                <div class="navbar-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
-     </header>
-     <!-- Hero Section -->
+    </header>
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
-            <video autoplay muted loop src="images/gta-v-trailer.mp4" class="hero-video" type="video/mp4"></video>
+            <video autoplay muted loop class="hero-video">
+                <source src="images/gta-v-trailer.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
@@ -98,7 +110,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Escolha Sua Edição</h2>
-                <p class="section-subtitle">Diferentes opções para diferentes tipos de jogadores, desde o casual até o hardcore</p>
+                <p class="section-subtitle">Diferentes opções para diferentes jogadores</p>
             </div>
             <div class="plans-grid">
                 <div class="plan-card">
@@ -111,13 +123,12 @@
                         </div>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ Jogo completo GTA V</li>
-                        <li>✓ Modo História completo</li>
-                        <li>✓ Acesso ao GTA Online</li>
-                        <li>✓ Atualizações gratuitas</li>
-                        <li>✓ Suporte multiplataforma</li>
+                        <li>Jogo completo GTA V</li>
+                        <li>Modo História completo</li>
+                        <li>Acesso ao GTA Online</li>
+                        <li>Atualizações gratuitas</li>
                     </ul>
-                    <a href="#" class="btn btn-outline">Comprar Agora</a>
+                    <a href="#" class="btn btn-outline">Comprar</a>
                 </div>
                 <div class="plan-card featured">
                     <div class="plan-badge">Mais Popular</div>
@@ -130,14 +141,13 @@
                         </div>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ Jogo completo GTA V</li>
-                        <li>✓ Criminal Enterprise Starter Pack</li>
-                        <li>✓ GTA$ 1.000.000 bônus</li>
-                        <li>✓ Propriedades e veículos exclusivos</li>
-                        <li>✓ Atualizações gratuitas</li>
-                        <li>✓ Conteúdo premium exclusivo</li>
+                        <li>Jogo completo GTA V</li>
+                        <li>Criminal Enterprise Starter Pack</li>
+                        <li>GTA$ 1.000.000 bônus</li>
+                        <li>Propriedades e veículos exclusivos</li>
+                        <li>Atualizações gratuitas</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Comprar Agora</a>
+                    <a href="#" class="btn btn-primary">Comprar</a>
                 </div>
                 <div class="plan-card">
                     <div class="plan-header">
@@ -149,19 +159,18 @@
                         </div>
                     </div>
                     <ul class="plan-features">
-                        <li>✓ Apenas GTA Online</li>
-                        <li>✓ Mundo multiplayer</li>
-                        <li>✓ Atualizações constantes</li>
-                        <li>✓ Novos conteúdos semanais</li>
-                        <li>✓ Eventos especiais</li>
+                        <li>Apenas GTA Online</li>
+                        <li>Mundo multiplayer</li>
+                        <li>Atualizações constantes</li>
+                        <li>Novos conteúdos</li>
                     </ul>
-                    <a href="#" class="btn btn-outline">Comprar Agora</a>
+                    <a href="#" class="btn btn-outline">Comprar</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Devices Sections -->
-     <section id="devices" class="devices">
+    <!-- Devices Section -->
+    <section id="devices" class="devices">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Disponível em Todas as Plataformas</h2>
@@ -181,7 +190,7 @@
                 <div class="device-card">
                     <img src="images/xbox-icon.png" alt="Xbox" class="device-icon">
                     <h3>Xbox</h3>
-                    <p>Xbox One & Series X|S<br>Smart Delivery incluido</p>
+                    <p>Xbox One & Series X|S<br>Smart Delivery incluído</p>
                 </div>
             </div>
             <div class="cross-platform">
@@ -189,9 +198,9 @@
                 <p>Transfira seu progresso entre plataformas com o Rockstar Social Club</p>
             </div>
         </div>
-     </section>
-     <!-- FAQ Section -->
-      <section id="faq" class="faq">
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Perguntas Frequentes</h2>
@@ -245,14 +254,14 @@
                 </div>
             </div>
         </div>
-      </section>
-      <!-- Footer -->
-      <footer class="footer">
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="images/rockstar-logo.png" alt="Rockstar Games" class="footer-logo">
-                    <p>© 2025 Rockstar Games, Inc. Todos os direitos reservados.</p>
+                    <p>© 2024 Rockstar Games, Inc. Todos os direitos reservados.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Jogos</h4>
@@ -276,7 +285,7 @@
                     <h4>Comunidade</h4>
                     <ul>
                         <li><a href="#">Discord</a></li>
-                        <li><a href="#">X</a></li>
+                        <li><a href="#">Twitter</a></li>
                         <li><a href="#">YouTube</a></li>
                         <li><a href="#">Instagram</a></li>
                     </ul>
@@ -287,6 +296,8 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
