@@ -1,5 +1,34 @@
 // Aguarda o DOM carregar
 document.addEventListener("DOMContentLoaded", () => {
+  // Intro Screen Logic
+  const introScreen = document.getElementById("introScreen")
+  const mainContent = document.getElementById("mainContent")
+
+  // Bloqueia scroll durante a intro
+  document.body.style.overflow = "hidden"
+
+  // Timer para remover a intro após 4.5 segundos
+  setTimeout(() => {
+    if (introScreen) {
+      // Fade out da intro
+      introScreen.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out"
+      introScreen.style.opacity = "0"
+      introScreen.style.transform = "scale(1.1)"
+
+      // Remove a intro e mostra o conteúdo principal
+      setTimeout(() => {
+        introScreen.style.display = "none"
+        document.body.style.overflow = "auto"
+
+        // Fade in do conteúdo principal
+        if (mainContent) {
+          mainContent.style.transition = "opacity 1s ease-out"
+          mainContent.style.opacity = "1"
+        }
+      }, 800)
+    }
+  }, 4500) // 4.5 segundos total
+
   // Rolagem suave para links de navegação
   const navLinks = document.querySelectorAll('a[href^="#"]')
   navLinks.forEach((link) => {
@@ -142,8 +171,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fechar menu mobile com ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      navbarNav.classList.remove("active")
-      navbarToggle.classList.remove("active")
+      if (navbarNav) navbarNav.classList.remove("active")
+      if (navbarToggle) navbarToggle.classList.remove("active")
     }
   })
 
@@ -169,5 +198,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Console welcome message
   console.log("%c🎮 GTA V Landing Page", "color: #f0b90b; font-size: 20px; font-weight: bold;")
-  console.log("%cDesenvolvido com HTML5, SASS, jQuery e Gulp", "color: #ffffff; font-size: 14px;")
+  console.log("%cDesenvolvido com HTML5, SASS e JavaScript Vanilla", "color: #ffffff; font-size: 14px;")
 })

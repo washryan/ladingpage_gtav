@@ -15,287 +15,334 @@
     <link rel="stylesheet" href="css/main.min.css">
     
     <!-- Favicon -->
-    <link rel="icon" href="../src/images/favicon.png" type="image/png" />
+    <link rel="icon" type="image/x-icon" href="../src/images/favicon.ico">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
+    <!-- Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <!-- GTA V Logo -->
+            <div class="gta-logo">
+                <div class="logo-main">
+                    <span class="logo-g">G</span>
+                    <span class="logo-t">T</span>
+                    <span class="logo-a">A</span>
+                </div>
+                <div class="logo-v">V</div>
+            </div>
+            
+            <!-- Loading Gun Animation -->
+            <div class="loading-gun">
+                <div class="gun-barrel"></div>
+                <div class="gun-body"></div>
+                <div class="gun-trigger"></div>
+                <div class="muzzle-flash"></div>
+            </div>
+            
+            <!-- Loading Text -->
+            <div class="loading-text">
+                <span class="loading-dots">Carregando</span>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Effects -->
+        <div class="intro-bg">
+            <div class="bg-lines"></div>
+            <div class="bg-particles"></div>
+        </div>
+    </div>
+
+    <!-- Main Content (Initially Hidden) -->
+    <div class="main-content" id="mainContent" style="opacity: 0;">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <img src="images/gta-logo.png" alt="GTA V Logo" class="logo">
+                    </div>
+                    <ul class="navbar-nav">
+                        <li><a href="#home" class="nav-link">Início</a></li>
+                        <li><a href="#about" class="nav-link">Sobre</a></li>
+                        <li><a href="#plans" class="nav-link">Planos</a></li>
+                        <li><a href="#devices" class="nav-link">Dispositivos</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    </ul>
+                    <div class="navbar-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <video autoplay muted loop class="hero-video">
+                    <source src="images/gta-v-trailer.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
             <div class="container">
-                <div class="navbar-brand">
-                    <img src="images/gta-logo.png" alt="GTA V Logo" class="logo">
-                </div>
-                <ul class="navbar-nav">
-                    <li><a href="#home" class="nav-link">Início</a></li>
-                    <li><a href="#about" class="nav-link">Sobre</a></li>
-                    <li><a href="#plans" class="nav-link">Planos</a></li>
-                    <li><a href="#devices" class="nav-link">Dispositivos</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                </ul>
-                <div class="navbar-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="hero-content">
+                    <h1 class="hero-title">GRAND THEFT AUTO V</h1>
+                    <p class="hero-subtitle">O mundo aberto mais ambicioso já criado</p>
+                    <div class="hero-buttons">
+                        <a href="#plans" class="btn btn-primary">Comprar Agora</a>
+                        <a href="#about" class="btn btn-secondary">Saiba Mais</a>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <video autoplay muted loop class="hero-video">
-                <source src="images/gta-v-trailer.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">GRAND THEFT AUTO V</h1>
-                <p class="hero-subtitle">O mundo aberto mais ambicioso já criado</p>
-                <div class="hero-buttons">
-                    <a href="#plans" class="btn btn-primary">Comprar Agora</a>
-                    <a href="#about" class="btn btn-secondary">Saiba Mais</a>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre o Jogo</h2>
+                    <p class="section-subtitle">Três protagonistas únicos em uma história épica</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <img src="images/michael.jpg" alt="Michael De Santa" class="about-image">
+                        <h3>Michael De Santa</h3>
+                        <p>Ex-assaltante de bancos vivendo uma vida protegida em Los Santos</p>
+                    </div>
+                    <div class="about-card">
+                        <img src="images/franklin.jpg" alt="Franklin Clinton" class="about-image">
+                        <h3>Franklin Clinton</h3>
+                        <p>Jovem ambicioso em busca de oportunidades no mundo do crime</p>
+                    </div>
+                    <div class="about-card">
+                        <img src="images/trevor.jpg" alt="Trevor Philips" class="about-image">
+                        <h3>Trevor Philips</h3>
+                        <p>Psicopata violento vivendo no deserto de Blaine County</p>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">🌆</div>
+                        <h4>Mundo Aberto Massivo</h4>
+                        <p>Explore Los Santos e Blaine County com total liberdade</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🚗</div>
+                        <h4>Centenas de Veículos</h4>
+                        <p>Carros, motos, aviões, helicópteros e muito mais</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎮</div>
+                        <h4>GTA Online</h4>
+                        <p>Jogue com até 30 amigos em um mundo persistente</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Sobre o Jogo</h2>
-                <p class="section-subtitle">Três protagonistas únicos em uma história épica</p>
+        </section>
+        
+        <!-- Plans Section -->
+        <section id="plans" class="plans">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Escolha Sua Edição</h2>
+                    <p class="section-subtitle">Diferentes opções para diferentes jogadores</p>
+                </div>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Edição Padrão</h3>
+                            <div class="plan-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">89</span>
+                                <span class="period">,90</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Jogo completo GTA V</li>
+                            <li>Modo História completo</li>
+                            <li>Acesso ao GTA Online</li>
+                            <li>Atualizações gratuitas</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Comprar</a>
+                    </div>
+                    <div class="plan-card featured">
+                        <div class="plan-badge">Mais Popular</div>
+                        <div class="plan-header">
+                            <h3>Premium Edition</h3>
+                            <div class="plan-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">149</span>
+                                <span class="period">,90</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Jogo completo GTA V</li>
+                            <li>Criminal Enterprise Starter Pack</li>
+                            <li>GTA$ 1.000.000 bônus</li>
+                            <li>Propriedades e veículos exclusivos</li>
+                            <li>Atualizações gratuitas</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>GTA Online</h3>
+                            <div class="plan-price">
+                                <span class="currency">R$</span>
+                                <span class="amount">39</span>
+                                <span class="period">,90</span>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Apenas GTA Online</li>
+                            <li>Mundo multiplayer</li>
+                            <li>Atualizações constantes</li>
+                            <li>Novos conteúdos</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">Comprar</a>
+                    </div>
+                </div>
             </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <img src="images/michael.jpg" alt="Michael De Santa" class="about-image">
-                    <h3>Michael De Santa</h3>
-                    <p>Ex-assaltante de bancos vivendo uma vida protegida em Los Santos</p>
+        </section>
+        
+        <!-- Devices Section -->
+        <section id="devices" class="devices">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Disponível em Todas as Plataformas</h2>
+                    <p class="section-subtitle">Jogue onde e como quiser</p>
                 </div>
-                <div class="about-card">
-                    <img src="images/franklin.jpg" alt="Franklin Clinton" class="about-image">
-                    <h3>Franklin Clinton</h3>
-                    <p>Jovem ambicioso em busca de oportunidades no mundo do crime</p>
+                <div class="devices-grid">
+                    <div class="device-card">
+                        <img src="images/pc-icon.png" alt="PC" class="device-icon">
+                        <h3>PC</h3>
+                        <p>Windows 10/11<br>Steam, Epic Games, Rockstar Games Launcher</p>
+                    </div>
+                    <div class="device-card">
+                        <img src="images/playstation-icon.png" alt="PlayStation" class="device-icon">
+                        <h3>PlayStation</h3>
+                        <p>PS4 & PS5<br>Versão otimizada para nova geração</p>
+                    </div>
+                    <div class="device-card">
+                        <img src="images/xbox-icon.png" alt="Xbox" class="device-icon">
+                        <h3>Xbox</h3>
+                        <p>Xbox One & Series X|S<br>Smart Delivery incluído</p>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <img src="images/trevor.jpg" alt="Trevor Philips" class="about-image">
-                    <h3>Trevor Philips</h3>
-                    <p>Psicopata violento vivendo no deserto de Blaine County</p>
-                </div>
-            </div>
-            <div class="about-features">
-                <div class="feature">
-                    <div class="feature-icon">🌆</div>
-                    <h4>Mundo Aberto Massivo</h4>
-                    <p>Explore Los Santos e Blaine County com total liberdade</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🚗</div>
-                    <h4>Centenas de Veículos</h4>
-                    <p>Carros, motos, aviões, helicópteros e muito mais</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🎮</div>
-                    <h4>GTA Online</h4>
-                    <p>Jogue com até 30 amigos em um mundo persistente</p>
+                <div class="cross-platform">
+                    <h4>Progressão Cruzada</h4>
+                    <p>Transfira seu progresso entre plataformas com o Rockstar Social Club</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Plans Section -->
-    <section id="plans" class="plans">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Escolha Sua Edição</h2>
-                <p class="section-subtitle">Diferentes opções para diferentes jogadores</p>
-            </div>
-            <div class="plans-grid">
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Edição Padrão</h3>
-                        <div class="plan-price">
-                            <span class="currency">R$</span>
-                            <span class="amount">89</span>
-                            <span class="period">,90</span>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <p class="section-subtitle">Tire suas dúvidas sobre GTA V</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Qual é a diferença entre GTA V e GTA Online?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>GTA V é o modo história single-player, enquanto GTA Online é o modo multiplayer persistente onde você pode jogar com outros jogadores em um mundo compartilhado.</p>
                         </div>
                     </div>
-                    <ul class="plan-features">
-                        <li>Jogo completo GTA V</li>
-                        <li>Modo História completo</li>
-                        <li>Acesso ao GTA Online</li>
-                        <li>Atualizações gratuitas</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">Comprar</a>
-                </div>
-                <div class="plan-card featured">
-                    <div class="plan-badge">Mais Popular</div>
-                    <div class="plan-header">
-                        <h3>Premium Edition</h3>
-                        <div class="plan-price">
-                            <span class="currency">R$</span>
-                            <span class="amount">149</span>
-                            <span class="period">,90</span>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Posso jogar GTA V offline?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim, o modo história de GTA V pode ser jogado completamente offline. Apenas o GTA Online requer conexão com a internet.</p>
                         </div>
                     </div>
-                    <ul class="plan-features">
-                        <li>Jogo completo GTA V</li>
-                        <li>Criminal Enterprise Starter Pack</li>
-                        <li>GTA$ 1.000.000 bônus</li>
-                        <li>Propriedades e veículos exclusivos</li>
-                        <li>Atualizações gratuitas</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>GTA Online</h3>
-                        <div class="plan-price">
-                            <span class="currency">R$</span>
-                            <span class="amount">39</span>
-                            <span class="period">,90</span>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Há crossplay entre plataformas?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Atualmente, GTA Online não suporta crossplay entre diferentes plataformas, mas você pode transferir seu progresso usando o Rockstar Social Club.</p>
                         </div>
                     </div>
-                    <ul class="plan-features">
-                        <li>Apenas GTA Online</li>
-                        <li>Mundo multiplayer</li>
-                        <li>Atualizações constantes</li>
-                        <li>Novos conteúdos</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">Comprar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Devices Section -->
-    <section id="devices" class="devices">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Disponível em Todas as Plataformas</h2>
-                <p class="section-subtitle">Jogue onde e como quiser</p>
-            </div>
-            <div class="devices-grid">
-                <div class="device-card">
-                    <img src="images/pc-icon.png" alt="PC" class="device-icon">
-                    <h3>PC</h3>
-                    <p>Windows 10/11<br>Steam, Epic Games, Rockstar Games Launcher</p>
-                </div>
-                <div class="device-card">
-                    <img src="images/playstation-icon.png" alt="PlayStation" class="device-icon">
-                    <h3>PlayStation</h3>
-                    <p>PS4 & PS5<br>Versão otimizada para nova geração</p>
-                </div>
-                <div class="device-card">
-                    <img src="images/xbox-icon.png" alt="Xbox" class="device-icon">
-                    <h3>Xbox</h3>
-                    <p>Xbox One & Series X|S<br>Smart Delivery incluído</p>
-                </div>
-            </div>
-            <div class="cross-platform">
-                <h4>Progressão Cruzada</h4>
-                <p>Transfira seu progresso entre plataformas com o Rockstar Social Club</p>
-            </div>
-        </div>
-    </section>
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Perguntas Frequentes</h2>
-                <p class="section-subtitle">Tire suas dúvidas sobre GTA V</p>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Qual é a diferença entre GTA V e GTA Online?</h4>
-                        <span class="faq-toggle">+</span>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Quais são os requisitos mínimos para PC?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>OS: Windows 10 64-bit, Processador: Intel Core i5 3470 / AMD FX-8350, Memória: 8 GB RAM, Placa de vídeo: NVIDIA GTX 660 2GB / AMD HD 7870 2GB, DirectX: Versão 11, Armazenamento: 110 GB.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>GTA V é o modo história single-player, enquanto GTA Online é o modo multiplayer persistente onde você pode jogar com outros jogadores em um mundo compartilhado.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Posso jogar GTA V offline?</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim, o modo história de GTA V pode ser jogado completamente offline. Apenas o GTA Online requer conexão com a internet.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Há crossplay entre plataformas?</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Atualmente, GTA Online não suporta crossplay entre diferentes plataformas, mas você pode transferir seu progresso usando o Rockstar Social Club.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Quais são os requisitos mínimos para PC?</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>OS: Windows 10 64-bit, Processador: Intel Core i5 3470 / AMD FX-8350, Memória: 8 GB RAM, Placa de vídeo: NVIDIA GTX 660 2GB / AMD HD 7870 2GB, DirectX: Versão 11, Armazenamento: 110 GB.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>O jogo recebe atualizações regulares?</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim, especialmente o GTA Online recebe atualizações regulares com novos conteúdos, veículos, propriedades e modos de jogo.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>O jogo recebe atualizações regulares?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim, especialmente o GTA Online recebe atualizações regulares com novos conteúdos, veículos, propriedades e modos de jogo.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/rockstar-logo.png" alt="Rockstar Games" class="footer-logo">
-                    <p>© 2024 Rockstar Games, Inc. Todos os direitos reservados.</p>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <img src="images/rockstar-logo.png" alt="Rockstar Games" class="footer-logo">
+                        <p>© 2024 Rockstar Games, Inc. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Jogos</h4>
+                        <ul>
+                            <li><a href="#">GTA V</a></li>
+                            <li><a href="#">Red Dead Redemption 2</a></li>
+                            <li><a href="#">GTA Online</a></li>
+                            <li><a href="#">Red Dead Online</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">Central de Ajuda</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Status dos Servidores</a></li>
+                            <li><a href="#">Reportar Bug</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Comunidade</h4>
+                        <ul>
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">YouTube</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Jogos</h4>
-                    <ul>
-                        <li><a href="#">GTA V</a></li>
-                        <li><a href="#">Red Dead Redemption 2</a></li>
-                        <li><a href="#">GTA Online</a></li>
-                        <li><a href="#">Red Dead Online</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Suporte</h4>
-                    <ul>
-                        <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Status dos Servidores</a></li>
-                        <li><a href="#">Reportar Bug</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Comunidade</h4>
-                    <ul>
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">YouTube</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
+                <div class="footer-bottom">
+                    <p>Este é um projeto demonstrativo. GTA V é propriedade da Rockstar Games.</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>Este é um projeto demonstrativo. GTA V é propriedade da Rockstar Games.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
     <!-- Scripts -->
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/main.min.js"></script>
